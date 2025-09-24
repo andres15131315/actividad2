@@ -1,5 +1,15 @@
-<section>
-   <h1> Productos</h1> 
-   <p>Explora nuestra lista de productos disponibles.</p>
-    <img src="/img/descarga2.jpg" alt="Imagen Productos" width="300">
-    </section>
+<section class="products-section">
+  <h1>Productos Destacados</h1>
+  <p>Explora nuestra selección de productos de alta calidad para ciclismo.</p>
+
+  <div class="products-list">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.name">
+      <div class="product-info">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p class="price">$ {{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>
