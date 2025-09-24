@@ -1,0 +1,22 @@
+/* Layout general para que el footer quede abajo */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgb(77, 72, 82);
+}
+
+/* El contenedor principal de Angular */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El router-outlet ocupa el espacio disponible */
+router-outlet {
+  flex: 1; /* hace que el contenido empuje el footer hacia abajo */
+  display: block;
+}
